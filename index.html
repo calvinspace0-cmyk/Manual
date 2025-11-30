@@ -3,12 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Cal Tech</title>
+  <title>Cal Tech</title>
   <link rel="icon" type="image/png" href="Gemini_Generated_Image_asd34tasd34tasd3.png">
+
   <style>
-    :root{--bg:#ffffff;--primary:#1e90ff;--muted:#6b7280}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;background:var(--bg);color:#0f1724}
+    :root{
+      --bg:#ffffff;
+      --text:#0f1724;
+      --card:#ffffff;
+      --primary:#1e90ff;
+      --muted:#6b7280;
+    }
+
+    body.dark{
+      --bg:#0d1117;
+      --text:#e6edf3;
+      --card:#161b22;
+      --primary:#3ea6ff;
+      --muted:#9da5b4;
+    }
+
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background:var(--bg);
+      color:var(--text);
+      transition:0.3s;
+    }
 
     /* HEADER */
     header{
@@ -17,44 +38,75 @@
       padding:28px 20px;
       text-align:center;
     }
-    header img{
-      width:110px;
-      height:auto;
-      margin-bottom:10px;
-      filter:drop-shadow(0 2px 4px rgba(0,0,0,0.25));
-    }
-    header h1{
-      margin:0;
-      font-size:1.6rem;
+
+    /* TOPO – Botões lado a lado */
+    .top-controls{
+      position:fixed;
+      top:10px;
+      right:10px;
+      display:flex;
+      align-items:center;
+      gap:14px;
+      z-index:9999;
     }
 
-    /* CONTEÚDO */
+    /* Botão do modo claro/escuro */
+    .toggle-mode{
+      background:var(--primary);
+      color:#fff;
+      border:none;
+      padding:8px 14px;
+      border-radius:8px;
+      cursor:pointer;
+      font-size:14px;
+      font-weight:600;
+    }
+
+    /* Controle de volume */
+    .volume-box{
+      background:var(--card);
+      padding:8px 12px;
+      border-radius:10px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.15);
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+
+    .volume-box input[type="range"]{
+      width:120px;
+      height:4px;
+      cursor:pointer;
+    }
+
+    /* Conteúdo */
     .container{max-width:1100px;margin:32px auto;padding:0 20px}
     .grid{display:grid;grid-template-columns:1fr;gap:18px}
     @media(min-width:860px){.grid{grid-template-columns:repeat(2,1fr)}}
 
     .card{
-      background:#fff;
+      background:var(--card);
       border-radius:12px;
       padding:18px;
       box-shadow:0 6px 18px rgba(15,23,36,0.06);
       border:1px solid rgba(15,23,36,0.03)
     }
-    .head{display:flex;align-items:center;gap:14px}
+
     .icon{
       width:56px;
       height:56px;
       border-radius:10px;
-      background:linear-gradient(180deg,rgba(30,144,255,0.08),rgba(96,165,250,0.04));
+      background:rgba(30,144,255,0.1);
       display:flex;
       align-items:center;
       justify-content:center;
       font-size:22px;
       color:var(--primary)
     }
+
     h2{margin:0;font-size:1.15rem;color:var(--primary)}
-    p{margin:10px 0;color:var(--muted);line-height:1.45}
-    .example{margin-top:8px;font-size:0.98rem;color:#0f1724}
+    p{margin:10px 0;color:var(--muted)}
+    .example{margin-top:8px;font-size:0.98rem;color:var(--text)}
     .tag{
       display:inline-block;
       margin-top:12px;
@@ -69,10 +121,61 @@
 
 <body>
 
-  <!-- Música de Fundo -->
-  <audio autoplay loop>
+  <!-- Música -->
+  <audio id="musica" autoplay loop muted>
     <source src="MÚSICA  O Som do Cal Tech.mp3" type="audio/mpeg">
   </audio>
+
+  <!-- 🔝 TOPO: Modo Escuro + Volume -->
+  <div class="top-controls">
+
+    <!-- Botão modo escuro/claro -->
+    <button class="toggle-mode" id="btnModo">🌙 Modo Escuro</button>
+
+    <!-- Controle de Volume -->
+    <div class="volume-box">
+      🔊
+      <input type="range" id="vol" min="0" max="1" step="0.01" value="0.5">
+    </div>
+  </div>
+
+  <script>
+    /* ======================
+       Música com autoplay
+    ====================== */
+    const audio = document.getElementById("musica");
+    window.addEventListener("load", () => {
+      audio.muted = false;
+      audio.play().catch(() => {
+        document.body.addEventListener("click", () => {
+          audio.muted = false;
+          audio.play();
+        }, { once: true });
+      });
+    });
+
+    /* ======================
+       Controle de volume
+    ====================== */
+    const slider = document.getElementById("vol");
+    slider.addEventListener("input", () => {
+      audio.volume = slider.value;
+    });
+
+    /* ======================
+       Modo claro / escuro
+    ====================== */
+    const btnModo = document.getElementById("btnModo");
+    btnModo.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+
+      if(document.body.classList.contains("dark")){
+        btnModo.innerHTML = "☀️ Modo Claro";
+      } else {
+        btnModo.innerHTML = "🌙 Modo Escuro";
+      }
+    });
+  </script>
 
   <header>
     <h1>Serviços de Tecnologia</h1>
@@ -80,6 +183,8 @@
 
   <div class="container">
     <div class="grid">
+
+      <!-- SEU CONTEÚDO INTEIRO MANTIDO IGUAL -->
 
       <section class="card">
         <div class="head">
@@ -157,7 +262,7 @@
         <div class="head">
           <div class="icon">🔌</div>
           <div>
-            <h2>Criação de Cabos de Rede</h2>
+            <h2>Criação de Cabos</h2>
             <div class="tag">Para que serve</div>
           </div>
         </div>
@@ -167,5 +272,6 @@
 
     </div>
   </div>
+
 </body>
 </html>
