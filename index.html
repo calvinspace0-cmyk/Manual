@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serviços de Tecnologia</title>
+  <style>
+    :root{--bg:#ffffff;--primary:#1e90ff;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;background:var(--bg);color:#0f1724}
+    header{background:linear-gradient(90deg,var(--primary),#60a5fa);color:#fff;padding:28px 20px;text-align:center}
+    header h1{margin:0;font-size:1.6rem}
+    .container{max-width:1100px;margin:32px auto;padding:0 20px}
+    .grid{display:grid;grid-template-columns:1fr;gap:18px}
+    @media(min-width:860px){.grid{grid-template-columns:repeat(2,1fr)}}
+    .card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(15,23,36,0.06);border:1px solid rgba(15,23,36,0.03)}
+    .head{display:flex;align-items:center;gap:14px}
+    .icon{width:56px;height:56px;border-radius:10px;background:linear-gradient(180deg,rgba(30,144,255,0.08),rgba(96,165,250,0.04));display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--primary)}
+    h2{margin:0;font-size:1.15rem;color:var(--primary)}
+    p{margin:10px 0;color:var(--muted);line-height:1.45}
+    .example{margin-top:8px;font-size:0.98rem;color:#0f1724}
+    .tag{display:inline-block;margin-top:12px;padding:6px 10px;border-radius:999px;background:rgba(30,144,255,0.08);color:var(--primary);font-size:13px}
+    footer{max-width:1100px;margin:28px auto 60px;text-align:center;color:var(--muted);font-size:14px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Serviços de Tecnologia</h1>
+  </header>
+
+  <div class="container">
+    <div class="grid">
+
+      <section class="card">
+        <div class="head">
+          <div class="icon">☁️</div>
+          <div>
+            <h2>Backup</h2>
+            <div class="tag">Para que serve</div>
+          </div>
+        </div>
+        <p>Explicação simples: backup é fazer uma cópia dos seus arquivos importantes para outro lugar. Se o seu celular ou computador quebrar, for roubado ou precisar ser formatado, você recupera fotos, vídeos, documentos e contatos.</p>
+        <div class="example"><strong>Exemplo:</strong> salvar fotos da família, vídeos de festas, documentos do trabalho e a lista de contatos no Google Drive ou num HD externo.</div>
+      </section>
+
+      <section class="card">
+        <div class="head">
+          <div class="icon">💿</div>
+          <div>
+            <h2>Reformatação</h2>
+            <div class="tag">Para que serve</div>
+          </div>
+        </div>
+        <p>Explicação simples: reformatação apaga tudo do sistema e instala o sistema operacional de novo. Serve quando o computador está muito lento, com muitos erros ou com vírus que não saem com outras soluções.</p>
+        <div class="example"><strong>Exemplo:</strong> se o seu notebook está super lento e travando, formatar e reinstalar o Windows pode deixá‑lo rápido de novo — desde que os arquivos importantes já estejam salvos em backup.</div>
+      </section>
+
+      <section class="card">
+        <div class="head">
+          <div class="icon">🔧</div>
+          <div>
+            <h2>Manutenção Preventiva</h2>
+            <div class="tag">Para que serve</div>
+          </div>
+        </div>
+        <p>Explicação simples: é uma limpeza e checagem do aparelho para evitar que ele estrague. Ajuda a reduzir poeira, superaquecimento e problemas elétricos antes que aconteçam.</p>
+        <div class="example"><strong>Exemplo:</strong> limpar poeira do interior do PC, limpar teclado, checar se o HD está saudável — isso evita que o computador pare de funcionar de repente.</div>
+      </section>
+
+      <section class="card">
+        <div class="head">
+          <div class="icon">🌡️</div>
+          <div>
+            <h2>Troca de Pasta Térmica</h2>
+            <div class="tag">Para que serve</div>
+          </div>
+        </div>
+        <p>Explicação simples: a pasta térmica fica entre o processador e o cooler e ajuda a transferir calor. Com o tempo ela resseca e o processador esquenta demais — trocar a pasta reduz a temperatura e evita desligamentos.</p>
+        <div class="example"><strong>Exemplo:</strong> se o seu notebook desliga sozinho quando fica quente, trocar a pasta térmica pode resolver e fazer o aparelho durar mais.</div>
+      </section>
+
+      <section class="card">
+        <div class="head">
+          <div class="icon">🧩</div>
+          <div>
+            <h2>Instalação de Drivers</h2>
+            <div class="tag">Para que serve</div>
+          </div>
+        </div>
+        <p>Explicação simples: drivers são programas que dizem ao computador como usar peças como placa de vídeo, impressora ou placa de rede. Sem o driver certo, algumas coisas podem não funcionar corretamente.</p>
+        <div class="example"><strong>Exemplo:</strong> a impressora não imprime? Muitas vezes é porque o driver não está instalado. Instalar o driver faz a impressora funcionar com o computador.</div>
+      </section>
+
+      <section class="card">
+        <div class="head">
+          <div class="icon">📶</div>
+          <div>
+            <h2>Configuração de Roteador</h2>
+            <div class="tag">Para que serve</div>
+          </div>
+        </div>
+        <p>Explicação simples: configurar o roteador significa deixar sua internet segura, com um nome para a rede e uma senha. Também ajuda a melhorar o sinal dentro de casa ou do escritório.</p>
+        <div class="example"><strong>Exemplo:</strong> colocar uma senha no Wi‑Fi para que apenas sua família use a internet e ajustar a posição do roteador para o sinal chegar melhor no quarto.</div>
+      </section>
+
+      <section class="card">
+        <div class="head">
+          <div class="icon">🔌</div>
+          <div>
+            <h2>Criação de Cabos de Rede</h2>
+            <div class="tag">Para que serve</div>
+          </div>
+        </div>
+        <p>Explicação simples: criar cabos de rede significa fazer um cabo que conecta o computador ao roteador por fio. O fio costuma ser mais estável e rápido que o Wi‑Fi em muitos casos.</p>
+        <div class="example"><strong>Exemplo:</strong> ligar o computador na TV via cabo de rede para ter internet mais estável em jogos ou em trabalhos importantes.</div>
+      </section>
+
+    </div>
+  </div>
+</body>
+</html>
