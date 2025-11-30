@@ -3,27 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Serviços de Tecnologia</title>
+  <title> Cal Tech</title>
+  <link rel="icon" type="image/png" href="Gemini_Generated_Image_asd34tasd34tasd3.png">
   <style>
     :root{--bg:#ffffff;--primary:#1e90ff;--muted:#6b7280}
     *{box-sizing:border-box}
     body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;background:var(--bg);color:#0f1724}
-    header{background:linear-gradient(90deg,var(--primary),#60a5fa);color:#fff;padding:28px 20px;text-align:center}
-    header h1{margin:0;font-size:1.6rem}
+
+    /* HEADER */
+    header{
+      background:linear-gradient(90deg,var(--primary),#60a5fa);
+      color:#fff;
+      padding:28px 20px;
+      text-align:center;
+    }
+    header img{
+      width:110px;
+      height:auto;
+      margin-bottom:10px;
+      filter:drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+    }
+    header h1{
+      margin:0;
+      font-size:1.6rem;
+    }
+
+    /* CONTEÚDO */
     .container{max-width:1100px;margin:32px auto;padding:0 20px}
     .grid{display:grid;grid-template-columns:1fr;gap:18px}
     @media(min-width:860px){.grid{grid-template-columns:repeat(2,1fr)}}
-    .card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(15,23,36,0.06);border:1px solid rgba(15,23,36,0.03)}
+
+    .card{
+      background:#fff;
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(15,23,36,0.06);
+      border:1px solid rgba(15,23,36,0.03)
+    }
     .head{display:flex;align-items:center;gap:14px}
-    .icon{width:56px;height:56px;border-radius:10px;background:linear-gradient(180deg,rgba(30,144,255,0.08),rgba(96,165,250,0.04));display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--primary)}
+    .icon{
+      width:56px;
+      height:56px;
+      border-radius:10px;
+      background:linear-gradient(180deg,rgba(30,144,255,0.08),rgba(96,165,250,0.04));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:22px;
+      color:var(--primary)
+    }
     h2{margin:0;font-size:1.15rem;color:var(--primary)}
     p{margin:10px 0;color:var(--muted);line-height:1.45}
     .example{margin-top:8px;font-size:0.98rem;color:#0f1724}
-    .tag{display:inline-block;margin-top:12px;padding:6px 10px;border-radius:999px;background:rgba(30,144,255,0.08);color:var(--primary);font-size:13px}
-    footer{max-width:1100px;margin:28px auto 60px;text-align:center;color:var(--muted);font-size:14px}
+    .tag{
+      display:inline-block;
+      margin-top:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(30,144,255,0.08);
+      color:var(--primary);
+      font-size:13px
+    }
   </style>
 </head>
+
 <body>
+
+  <!-- Música de Fundo -->
+  <audio autoplay loop>
+    <source src="MÚSICA  O Som do Cal Tech.mp3" type="audio/mpeg">
+  </audio>
+
   <header>
     <h1>Serviços de Tecnologia</h1>
   </header>
@@ -52,7 +102,7 @@
           </div>
         </div>
         <p>Explicação simples: reformatação apaga tudo do sistema e instala o sistema operacional de novo. Serve quando o computador está muito lento, com muitos erros ou com vírus que não saem com outras soluções.</p>
-        <div class="example"><strong>Exemplo:</strong> se o seu notebook está super lento e travando, formatar e reinstalar o Windows pode deixá‑lo rápido de novo — desde que os arquivos importantes já estejam salvos em backup.</div>
+        <div class="example"><strong>Exemplo:</strong> se o seu notebook está super lento e travando, formatar e reinstalar o Windows pode deixá-lo rápido de novo — desde que os arquivos importantes já estejam salvos em backup.</div>
       </section>
 
       <section class="card">
@@ -100,7 +150,7 @@
           </div>
         </div>
         <p>Explicação simples: configurar o roteador significa deixar sua internet segura, com um nome para a rede e uma senha. Também ajuda a melhorar o sinal dentro de casa ou do escritório.</p>
-        <div class="example"><strong>Exemplo:</strong> colocar uma senha no Wi‑Fi para que apenas sua família use a internet e ajustar a posição do roteador para o sinal chegar melhor no quarto.</div>
+        <div class="example"><strong>Exemplo:</strong> colocar uma senha no Wi-Fi para que apenas sua família use a internet e ajustar a posição do roteador para o sinal chegar melhor no quarto.</div>
       </section>
 
       <section class="card">
@@ -111,7 +161,7 @@
             <div class="tag">Para que serve</div>
           </div>
         </div>
-        <p>Explicação simples: criar cabos de rede significa fazer um cabo que conecta o computador ao roteador por fio. O fio costuma ser mais estável e rápido que o Wi‑Fi em muitos casos.</p>
+        <p>Explicação simples: criar cabos de rede significa fazer um cabo que conecta o computador ao roteador por fio. O fio costuma ser mais estável e rápido que o Wi-Fi em muitos casos.</p>
         <div class="example"><strong>Exemplo:</strong> ligar o computador na TV via cabo de rede para ter internet mais estável em jogos ou em trabalhos importantes.</div>
       </section>
 
